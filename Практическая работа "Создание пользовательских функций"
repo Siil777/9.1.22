@@ -1,0 +1,165 @@
+
+#Простейшие арифметические операции
+#Написать функцию arithmetic, принимающую 3 аргумента: первые 2 - числа, третий - операция, которая должна быть произведена над ними. Если третий аргумент +,
+#сложить их; если —, то вычесть; * — умножить; / — разделить (первое на второе). В остальных случаях вернуть строку "Неизвестная операция".
+
+
+main sheet
+#from random import randint
+#import random
+
+#t=['+','-','/']
+#while True:
+#    y=random.choice(t)
+#    i=randint(1,10)
+#    try:
+
+
+from module1 import*
+
+answer=arithmetic(2.5, '+', 1.6)
+print(answer)
+
+while True:
+    answer=arithmetic(input(),input(), input())
+    print(answer)
+-----------------------------------------------------------------------------------------------------------
+def sheet module1
+
+def arithmetic(a1:float,symbol:str, a2:float)-> any:
+    """calculator
+    + plus, - minus, * multiple, / devide
+    : param float a1: the first digit
+    : param float a2: second digit
+    : param str symbol: action
+    : rtype: var undefined type
+
+    """
+    if symbol in ['+','-','/','*']:
+        
+        if symbol=='/' and a2==0:
+            answer='Div/0'
+        else:
+            answer=eval(str(a1)+symbol+str(a2))
+
+    else:
+        answer='Unknow action !'
+
+    return answer
+
+
+
+#eval - as long as it is arethmetic action does it
+
+# any - does any type of action
+------------------------------------------------------------------------------------------------------------
+2 Task main sheet
+#2Високосный год
+#Написать функцию is_year_leap, принимающую 1 аргумент — год, и возвращающую True, если год високосный, и False иначе.
+
+from module1 import*
+
+if answer1=is_year_leap(input()):
+
+    print('Leap year')
+else:
+    print('ordinary year')
+-----------------------------------------------------------------------------------------------------------
+#def sheet
+
+def is_year_leap(leap_year:int)->bool:
+    """ return True if year leap year, as long as the oposite False
+    :param int year: Year number
+    :rtype: bool Function answer certain formadis
+    """
+    leap_year=int(leap_year)
+
+    if leap_year%4==0:
+
+        answer1=True
+    else:
+
+        answer1=False
+
+    return answer1
+
+--------------------------------------------------------------------------------------------------------
+task 3
+#3Квадрат
+#Написать функцию square, принимающую 1 аргумент — сторону квадрата, и возвращающую 3 значения:
+#периметр квадрата, площадь квадрата и диагональ квадрата.
+# def sheet
+
+def square(a: float):
+    """
+    """
+
+    p=4*a
+    s=a*a
+    d=a*sqrt(2)
+    
+    
+
+    return p,s,d
+------------------------------------------------------------------------------------------------
+
+main sheet 
+
+p,s,d =square(input())
+
+print(f'Rectangle:{p}')
+print(f'area:{s}')
+print(f'diagonal:{d}')
+---------------------------------------------------------------------------------------------------
+
+##4Времена года
+##Написать функцию season, принимающую 1 аргумент — номер месяца (от 1 до 12), и возвращающую время года,
+##которому этот месяц принадлежит (talv, kevad, suvi или sügis).
+
+#main sheet 
+
+while True:
+    if not month.isdigit():
+        print('incorrect input')
+        print(' you can input only integer')
+        month= input('month(day):')
+        continue 
+    else:
+        break
+
+----------------------------------------------------------------------------------------------
+
+# def
+
+def season(month):
+    """
+    """
+    if month==12 or month<3:
+
+        return 'winter'
+    elif month==3 or month<6:
+        return 'spring'
+
+    elif month==6 or month<9:
+        return 'summer'
+
+    else:
+        return 'spring'
+month=input('month:')
+
+while True:
+    if month==0:
+        print('such month doesnt exist')
+        print('use only integer')
+        month=input('enter month:')
+        continue
+    else:
+        break
+
+month=int(month)
+answer=season(month)
+print(answer)
+
+
+    
+
