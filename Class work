@@ -16,13 +16,14 @@ main sheet
 
 
 from module1 import*
-
 answer=arithmetic(2.5, '+', 1.6)
 print(answer)
 
 while True:
     answer=arithmetic(input(),input(), input())
     print(answer)
+    break
+    
 -----------------------------------------------------------------------------------------------------------
 def sheet module1
 
@@ -57,13 +58,14 @@ def arithmetic(a1:float,symbol:str, a2:float)-> any:
 #2Високосный год
 #Написать функцию is_year_leap, принимающую 1 аргумент — год, и возвращающую True, если год високосный, и False иначе.
 
-from module1 import*
+while True:
 
-if answer1=is_year_leap(input()):
+    if answer==is_year_leap(input('enter year:')):
 
-    print('Leap year')
-else:
-    print('ordinary year')
+        print('Leap year')
+    else:
+        print('ordinary year')
+        break
 -----------------------------------------------------------------------------------------------------------
 #def sheet
 
@@ -105,7 +107,9 @@ def square(a: float):
 
 main sheet 
 
-p,s,d =square(input())
+p=square(input('Rectangle:'))
+s=square(input('Area:'))
+d=square(input('Dioganal:'))
 
 print(f'Rectangle:{p}')
 print(f'area:{s}')
